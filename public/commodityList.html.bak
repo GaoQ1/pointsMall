@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>积分商城</title>
+    <link rel="stylesheet" type="text/css" href="./css/s-common.css">
+    <link rel="stylesheet" type="text/css" href="./css/s-index.css">
+    <link rel="stylesheet" href="/vendor/Swiper/dist/css/swiper.css"/>
+    <style>
+        img{
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<!--轮播图片S-->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="./images/rewardshop/06c0587399757781a00d266bd0c7ff4b.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/rewardshop/06c0587399757781a00d266bd0c7ff4b.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/rewardshop/06c0587399757781a00d266bd0c7ff4b.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/rewardshop/06c0587399757781a00d266bd0c7ff4b.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/rewardshop/06c0587399757781a00d266bd0c7ff4b.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/rewardshop/06c0587399757781a00d266bd0c7ff4b.jpg" alt="">
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+<!--轮播图片E-->
+
+<div id="goods">
+    <!--module S-->
+    <div id="modules">
+        <div>
+            <div class="modules">
+                <div class="mod_title">
+                    <span>分类1</span>
+                </div>
+            </div>
+            <div class="list">
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>双贝珠耳饰</p>
+                        <p>482<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928094517list.jpg" alt="">
+                    </div>
+                </div>
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>双贝珠耳饰</p>
+                        <p>482<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928094517list.jpg" alt="">
+                    </div>
+                </div>
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>双贝珠耳饰</p>
+                        <p>482<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928094517list.jpg" alt="">
+                    </div>
+                </div>
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>双贝珠耳饰</p>
+                        <p>482<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928094517list.jpg" alt="">
+                    </div>
+                </div>
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>双贝珠耳饰</p>
+                        <p>482<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928094517list.jpg" alt="">
+                    </div>
+                </div>
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>双贝珠耳饰</p>
+                        <p>482<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928094517list.jpg" alt="">
+                    </div>
+                </div>
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>双贝珠耳饰</p>
+                        <p>482<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928094517list.jpg" alt="">
+                    </div>
+                </div>
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>双贝珠耳饰</p>
+                        <p>482<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928094517list.jpg" alt="">
+                    </div>
+                </div>
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>双贝珠耳饰</p>
+                        <p>482<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928094517list.jpg" alt="">
+                    </div>
+                </div>
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>双贝珠耳饰</p>
+                        <p>482<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928094517list.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--module E-->
+</div>
+</body>
+<script src="/vendor/Swiper/dist/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+</script>
+</html>

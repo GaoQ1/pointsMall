@@ -1,0 +1,422 @@
+body, html {
+    background-color: #f0f0f0
+}
+
+img {
+    display: block
+}
+
+.wheel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    float: left
+}
+
+.wheel a {
+    display: block;
+    width: 100%
+}
+
+.wheel ul {
+    display: -webkit-box;
+    border-bottom: 1px #e6e6e6 solid
+}
+
+.wheel ul li {
+    width: 100%;
+    -webkit-box-flex: 1;
+    overflow: hidden
+}
+
+.wheel ul li img {
+    width: 100%
+}
+
+.indicator {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    text-align: center;
+    font-size: 0
+}
+
+.indicator span {
+    width: 4px;
+    height: 4px;
+    display: inline-block;
+    background: #dfe2e0;
+    border-radius: 50%;
+    margin: 0 3px
+}
+
+.indicator span.on {
+    background: #fff
+}
+
+.menu {
+    width: 100%;
+    overflow: hidden
+}
+
+.count {
+    width: 49.8%;
+    height: 37px;
+    -webkit-box-sizing: border-box;
+    font-size: 0;
+    text-align: center;
+    float: left;
+    background-color: #fff
+}
+
+.count:active {
+    background-color: #f7f7f7
+}
+
+.count span {
+    line-height: 37px;
+    display: inline-block;
+    font-size: 1.4rem
+}
+
+.count span:nth-child(1) {
+    color: #333
+}
+
+.count span:nth-child(2) {
+    color: #ffc155;
+    margin-left: 4px
+}
+
+.my_record {
+    background: url("/images/rewardshop/myRecord.png") left center no-repeat;
+    padding-left: 25px;
+    background-size: 17px
+}
+
+.my_count {
+    background: url("/images/rewardshop/myCount.png") left center no-repeat;
+    padding-left: 25px;
+    background-size: 17px
+}
+
+.list {
+    width: 100%;
+    color: #666;
+    overflow: hidden;
+    background-color: #fff
+}
+
+.list_per, .list_per_index {
+    display: inline-block;
+    text-decoration: none;
+    color: #666;
+    border-right: 1px #f0f0f0 solid;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    border-bottom: 1px #f0f0f0 solid;
+    float: left;
+    background-color: #fff;
+}
+
+.gold_area {
+    width: 100%;
+    /*margin-top: 9px;*/
+    overflow: hidden;
+    background-color: #fff;
+    position: relative
+}
+
+.gold_area a {
+    display: inline-block
+}
+
+.gold {
+    -webkit-box-sizing: border-box;
+    width: 50%;
+    float: left;
+    background-color: #fff
+}
+
+.gold:nth-child(1) {
+    /*width: 44%*/
+    width: 50%
+}
+
+.gold:nth-child(2) {
+    width: 56%
+}
+
+#gold_left {
+    border-right: 1px solid #e6e6e6;
+}
+
+.gold_padding {
+    padding-bottom: 15.5%
+}
+
+.gold_txt {
+    padding-left: 10px;
+    padding-top: 10px
+}
+
+.mod_txt {
+    padding-left: 6%;
+    padding-top: 5%
+}
+
+.gold_txt p, .mod_txt p {
+    height: 16px;
+    line-height: 16px;
+    font-size: 1.4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.gold_txt p:nth-child(1), .mod_txt p:nth-child(1) {
+    color: #989898;
+    font-size: 1.2rem
+}
+
+.gold_txt p:nth-child(2) {
+    color: #333;
+    font-size: 1.4rem
+}
+
+.gold_txt p:nth-child(3), .mod_txt p:nth-child(3) {
+    color: #ffc155;
+    font-size: 1.2rem
+}
+
+.per_count {
+    display: inline-block;
+    width: 11px;
+    height: 10px;
+    background: url("/images/rewardshop/perCount.png") right bottom no-repeat;
+    background-size: 8px 10px;
+    position: relative;
+    top: 1px
+}
+
+.card {
+    display: inline-block;
+    width: 33px;
+    height: 12px;
+    position: relative;
+    top: 1px
+}
+
+.state {
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    padding: 0 3px;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1.2rem
+}
+
+.state_grey {
+    background-color: #ccc
+}
+
+.state_org {
+    background-color: #ff8903
+}
+
+.state_none {
+    display: inline-block;
+    height: 14px;
+    line-height: 14px
+}
+
+.gold_img {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    padding: 40% 0 12%
+    /*gaoquan edit*/
+}
+
+.gold_chunk {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-box-sizing: border-box;
+    background-color: #fff
+}
+
+.gold_sizing {
+    width: 50%;
+    height: 50%;
+    -webkit-box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #fff
+}
+
+.gold_chunk div:nth-child(1), .gold_sizing div:nth-child(1) {
+    overflow: hidden
+}
+
+.gold_row {
+    width: 47%;
+    float: left
+}
+
+#gold_right {
+    border-left: 1px solid #e6e6e6
+}
+
+.img_box1 {
+    width: 100%;
+}
+
+.img_box2 {
+    width: 46.6%;
+    float: right;
+}
+
+.gold_img_row {
+    width: 95%;
+    margin: auto;
+    padding: 30% 5% 0 0;
+}
+
+.gold_pic_l img, .gold_pic_r img {
+    width: 100%
+}
+
+.gold_col {
+    width: 41%;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.classify {
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    margin-top: 9px
+}
+
+.classify div {
+    width: 25%;
+    float: left
+}
+
+.classify div:active {
+    background-color: #f7f7f7
+}
+
+.classify div:nth-child(1), .classify div:nth-child(2), .classify div:nth-child(3), .classify div:nth-child(4) {
+    padding-top: 5px
+}
+
+.classify div:nth-child(5), .classify div:nth-child(6), .classify div:nth-child(7), .classify div:nth-child(8) {
+    padding-bottom: 5px
+}
+
+.classify p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666
+}
+
+.classify img {
+    width: 39px;
+    height: 39px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    margin: auto
+}
+
+.classify_txt {
+    height: 12px;
+    line-height: 12px;
+    padding-bottom: 5px
+}
+
+.modules {
+    height: 31px
+}
+
+.mod_title {
+    width: 100%;
+    height: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    margin: auto;
+    text-align: center
+}
+
+.mod_title span {
+    display: inline-block;
+    position: relative;
+    font-size: 1.2rem;
+    color: #333;
+    top: 8px;
+    padding: 0 5px;
+    background-color: #f0f0f0
+}
+
+.mod_state {
+    margin-right: 3px
+}
+
+.img_box3 {
+    width: 100%
+}
+
+.mod_img {
+    /*width: 110px;
+    height: 75px;*/
+    margin: auto;
+    overflow: hidden;
+    padding: 4.5px 0
+}
+
+.mod_third img {
+    width: 100%;
+    height: 138px
+}
+
+.line {
+    width: 50%;
+    height: 1px;
+    background: #e6e6e6;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1
+}
+
+.footer {
+    width: 100%;
+    height: 20px;
+    color: #999;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 20px;
+    background-color: #f0f0f0;
+    padding-bottom: 5px
+}
+
+/*.law span {
+    display: inline-block;
+    width: 9px;
+    height: 8px;
+    background: url(http://static.xiaojukeji.com/activity/img-mall/shop_law.png) center right no-repeat;
+    background-size: 4px 6px
+}*/
+
+.law-pad {
+    padding: 11px 0
+}

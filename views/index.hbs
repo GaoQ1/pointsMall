@@ -1,0 +1,162 @@
+<!--轮播图片S-->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        {{#each result.carouselPic}}
+        <div class="swiper-slide" onclick='location.href = "/mall/commodityDetail?productId={{id}}"'>
+            <img src="{{picUrl}}" alt="{{title}}"/>
+        </div>
+        {{/each}}
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+<!--轮播图片E-->
+
+<div class="menu">
+    <div class="count" id="count" onclick='location.href = "/mall/getscoreList?pageNow=1&pageSize=10"'>
+        <span class="my_count">积分</span>
+        <span>{{result.integral}}</span>
+    </div>
+    <div class="count" id="record" onclick='location.href = "/mall/changeList?pageNow=1&pageSize=10"'>
+        <span class="my_record">兑换记录</span>
+    </div>
+</div>
+
+<div id="goods">
+    <div class="modules">
+        <div class="mod_title">
+            <span>热门商品</span>
+        </div>
+    </div>
+    <!--黄金区域S-->
+    <div class="gold_area" id="gold" style="height: 174px;">
+        <div class="gold" id="gold_left">
+            {{#GetItemAt result.popularProducts 0}}
+                {{#if picUrl}}
+            <div class="gold_border" onclick='location.href = "/mall/commodityDetail?productId={{id}}"'>
+                <div class="gold_txt gold_col">
+                <p>{{title}}</p>
+                    <p>{{subTitle}}</p>
+                    <p>{{score}}<span class="per_count"></span></p>
+                </div>
+                <div class="img_box1">
+                    <img class="gold_img" src="{{picUrl}}" alt="" onerror="nofind();">
+                </div>
+            </div>
+                {{else}}
+            <div class="gold_border" style="overflow: hidden;">
+                <img style="width: 100%;" src="/images/bg/318-350.png">
+            </div>
+                {{/if}}
+            {{/GetItemAt}}
+        </div>
+        <div class="gold" id="gold_right">
+            <div class="line"></div>
+            {{#GetItemAt result.popularProducts 1}}
+                {{#if picUrl}}
+            <div class="gold_chunk">
+                <div onclick='location.href = "/mall/commodityDetail?productId={{id}}"'>
+                    <div class="gold_txt gold_row gold_padding">
+                        <p>{{title}}</p>
+                        <p>{{subTitle}}</p>
+                        <p>{{score}}<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box2">
+                        <img class="gold_img_row" src="{{picUrl}}" alt="" onerror="nofind();">
+                    </div>
+                </div>
+            </div>
+                {{else}}
+            <div class="gold_chunk" style="overflow: hidden;">
+                <img style="width: 100%;" src="/images/bg/320-174.png">
+            </div>
+                {{/if}}
+            {{/GetItemAt}}
+            <!--<div class="line"></div>-->
+            {{#GetItemAt result.popularProducts 2}}
+                {{#if picUrl}}
+            <div class="gold_sizing">
+                <div onclick='location.href = "/mall/commodityDetail?productId={{id}}"'>
+                    <div class="gold_txt gold_row gold_padding">
+                        <p>{{title}}</p>
+                        <p>{{subTitle}}</p>
+                        <p>{{score}}<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box2">
+                        <img class="gold_img_row" src="{{picUrl}}" alt="" onerror="nofind();">
+                    </div>
+                </div>
+            </div>
+                {{else}}
+            <div class="gold_sizing" style="overflow: hidden;">
+                <img style="width: 100%;" src="/images/bg/320-174.png">
+            </div>
+                {{/if}}
+            {{/GetItemAt}}
+        </div>
+    </div>
+    <!--黄金区域E-->
+
+    <!--分类S-->
+    <div class="classify" id="classify">
+        {{#each result.productCategories}}
+            <div onclick='location.href = "/mall/commodityList?categoryId={{id}}"'>
+                <p><img src="{{logoUrl}}" alt="" style="display: block;"></p>
+                <p class="classify_txt">{{name}}</p>
+            </div>
+        {{/each}}
+    </div>
+    <!--分类E-->
+
+    <!--module S-->
+    <div id="modules">
+        {{#each result.columns}}
+        <div>
+            <div class="modules">
+                <div class="mod_title">
+                    <span>{{title}}</span>
+                </div>
+            </div>
+            <div class="list">
+                {{#each productList}}
+                <div class="list_per_index" onclick='location.href = "/mall/commodityDetail?productId={{id}}"'>
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>{{title}}</span>
+                        </p>
+                        <p>{{subTitle}}</p>
+                        <p>{{score}}<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="{{picUrl}}" alt="" onerror="nofind();">
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <!--module E-->
+</div>
+<!--<div class="iphone" id="iphone" style="display: block;">活动由法宝网提供</div>
+<div class="footer" id="law">积分商城法律申明<span></span></div>
+<div class="footer">合作请联系：xxxxx@fabao.com</div>-->
+<script src="/js/libs/libs.min.js"></script>
+<script src="/vendor/Swiper/dist/js/swiper.jquery.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+    function nofind(){
+        var img=event.srcElement;
+        img.src="/images/bg/220-150.png";
+        img.onerror=null;
+    };
+</script>

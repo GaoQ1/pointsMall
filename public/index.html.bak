@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>积分商城</title>
+    <link rel="stylesheet" href="./css/style.min.css"/>
+    <style>
+        img{
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<!--轮播图片S-->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="./images/rewardshop/06c0587399757781a00d266bd0c7ff4b.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/rewardshop/06c0587399757781a00d266bd0c7ff4b.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/rewardshop/06c0587399757781a00d266bd0c7ff4b.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/rewardshop/06c0587399757781a00d266bd0c7ff4b.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/rewardshop/06c0587399757781a00d266bd0c7ff4b.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/rewardshop/06c0587399757781a00d266bd0c7ff4b.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/rewardshop/06c0587399757781a00d266bd0c7ff4b.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/rewardshop/06c0587399757781a00d266bd0c7ff4b.jpg" alt="">
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+<!--轮播图片E-->
+
+<div class="menu">
+    <div class="count" id="count">
+        <span class="my_count">积分</span>
+        <span>10090</span>
+    </div>
+    <div class="count" id="record">
+        <span class="my_record">兑换记录</span>
+    </div>
+</div>
+
+<div id="goods">
+
+    <!--黄金区域S-->
+    <div class="gold_area" id="gold" style="height: 205px;">
+        <div class="gold" id="gold_left">
+            <div class="gold_border" href="#">
+                <div class="gold_txt gold_col">
+                    <p>凤凰金融</p>
+                    <p>抽苹果6plus</p>
+                    <p>299<span class="per_count"></span></p>
+                    <span class="state state_org">抽奖</span>
+                </div>
+                <div class="img_box1">
+                    <img class="gold_img" src="./images/rewardshop/20150922111237list.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="gold" id="gold_right">
+            <div class="line"></div>
+            <div class="gold_chunk">
+                <div href="#">
+                    <div class="gold_txt gold_row gold_padding">
+                        <p></p>
+                        <p>抽30元出租车券礼包</p>
+                        <p>300<span class="per_count"></span></p>
+                        <span class="state state_org">抽奖</span>
+                    </div>
+                    <div class="img_box2">
+                        <img class="gold_img_row" src="./images/rewardshop/20150925110719list.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="gold_sizing">
+                <div href="#">
+                    <div class="gold_txt gold_row gold_padding">
+                        <p></p>
+                        <p>抽30元出租车券礼包</p>
+                        <p>300<span class="per_count"></span></p>
+                        <span class="state state_org">抽奖</span>
+                    </div>
+                    <div class="img_box2">
+                        <img class="gold_img_row" src="./images/rewardshop/20150925110719list.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--黄金区域E-->
+
+    <!--分类S-->
+    <div class="classify" id="classify">
+        <div href="#">
+            <p><img src="./images/rewardshop/category_new.png" alt="" style="display: block;"></p>
+            <p class="classify_txt">今日新品</p>
+        </div>
+
+        <div href="#">
+            <p><img src="./images/rewardshop/category_1.png" alt="" style="display: block;"></p>
+            <p class="classify_txt">电商购物</p>
+        </div>
+
+        <div href="#">
+            <p><img src="./images/rewardshop/category_2.png" alt="" style="display: block;"></p>
+            <p class="classify_txt">休闲娱乐</p>
+        </div>
+
+        <div href="#">
+            <p><img src="./images/rewardshop/category_3.png" alt="" style="display: block;"></p>
+            <p class="classify_txt">生活服务</p>
+        </div>
+
+        <div href="#">
+            <p><img src="./images/rewardshop/category_4.png" alt="" style="display: block;"></p>
+            <p class="classify_txt">本地美食</p>
+        </div>
+
+        <div href="#">
+            <p><img src="./images/rewardshop/category_8.png" alt="" style="display: block;"></p>
+            <p class="classify_txt">滴滴专区</p>
+        </div>
+
+        <div href="#">
+            <p><img src="./images/rewardshop/category_draw.png" alt="" style="display: block;"></p>
+            <p class="classify_txt">抽奖</p>
+        </div>
+        <div href="#">
+            <p><img src="./images/rewardshop/category_0.png" alt="" style="display: block;"></p>
+            <p class="classify_txt">其它</p>
+        </div>
+    </div>
+    <!--分类E-->
+
+    <!--module S-->
+    <div id="modules">
+        <div>
+            <div class="modules">
+                <div class="mod_title">
+                    <span>今日新品</span>
+                </div>
+            </div>
+            <div class="list">
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>双贝珠耳饰</p>
+                        <p>482<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928094517list.jpg" alt="">
+                    </div>
+                </div>
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>好巴食750g豆干</p>
+                        <p>300<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928103809list.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="modules">
+                <div class="mod_title">
+                    <span>小滴推荐</span>
+                </div>
+            </div>
+            <div class="list">
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>双贝珠耳饰</p>
+                        <p>482<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928094517list.jpg" alt="">
+                    </div>
+                </div>
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>好巴食750g豆干</p>
+                        <p>300<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928103809list.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="modules">
+                <div class="mod_title">
+                    <span>限量抢兑</span>
+                </div>
+            </div>
+            <div class="list">
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>双贝珠耳饰</p>
+                        <p>482<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928094517list.jpg" alt="">
+                    </div>
+                </div>
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>好巴食750g豆干</p>
+                        <p>300<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928103809list.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="modules">
+                <div class="mod_title">
+                    <span>精品优选</span>
+                </div>
+            </div>
+            <div class="list">
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>双贝珠耳饰</p>
+                        <p>482<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928094517list.jpg" alt="">
+                    </div>
+                </div>
+                <div class="list_per_index" href="#">
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>有赞</span>
+                        </p>
+                        <p>好巴食750g豆干</p>
+                        <p>300<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="./images/rewardshop/20150928103809list.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--module E-->
+</div>
+
+<div class="iphone" id="iphone" style="display: block;">活动由法宝网提供</div>
+<div class="footer" id="law">积分商城法律申明<span></span></div>
+<div class="footer">合作请联系：xxxxx@fabao.com</div>
+</body>
+<script src="./js/libs/libs.min.js"></script>
+<script src="./js/util/utils.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+
+    //example
+   /* var http = http({
+        errHandler:function(msg){
+            alert(msg);
+        }});
+    http.get("/home?json=1", null, function(data){
+        alert(JSON.stringify(data));
+    })*/
+</script>
+</html>

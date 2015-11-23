@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded", function () {function t(e, t, n, a) {e.style.height = parseInt(v * n * a / t) + "px"}var d = document, s = d.getElementById("classify"), g = (s.getElementsByTagName("div"), d.getElementById("gold")), v = (d.getElementById("iphone"), d.getElementsByTagName("body")[0], document.documentElement.clientWidth);t(g, 140, 174, .4);}, !1);

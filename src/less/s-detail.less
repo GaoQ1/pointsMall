@@ -1,0 +1,456 @@
+.img {
+    -webkit-user-select: none;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.img img {
+    width: 100%
+}
+
+.img_head {
+    position: relative
+}
+
+.describe_box {
+    position: relative;
+    height: 84px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.describe {
+    position: relative;
+    width: 100%;
+    height: 84px;
+    /*line-height: 84px;*/
+    font-size: 1.4rem;
+    background-color: rgba(255, 255, 255, .9);
+    border-bottom: 1px solid #ebebeb;
+}
+
+.describe h3 {
+    padding-left: 4%;
+    float: right;
+    color: #333;
+    font-weight: 400
+}
+
+.describe span:nth-child(1) {
+    background: url("/images/rewardshop/detail_count.png") right 20px no-repeat;
+    background-size: 10px 12px;
+    color: #ffc155;
+    margin-right: 4px;
+    padding-right: 15px;
+    font-size: 3.2rem;
+    position: absolute;
+    /*top: 10px;*/
+    left: 3%;
+}
+
+.describe span:nth-child(2) {
+    position: absolute;
+    top: 52px;
+    left: 3%;
+    font-size: 1.6rem;
+}
+
+.describe span:nth-child(2) i{
+    font-style: normal;
+    color: #ffc155;
+    font-size: 1.6rem;
+}
+
+.card {
+    display: inline-block;
+    width: 34px;
+    height: 55px
+}
+
+.des1 {
+    position: relative;
+    top: -55px
+}
+
+.gradients {
+    width: 100%;
+    height: 80px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, .5)));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#BDD738, endColorstr=#7E9516);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#BDD738,endColorstr=#7E9516)";
+    position: absolute;
+    bottom: 0
+}
+
+.gradients p {
+    color: #fff;
+    padding-left: 4%
+}
+
+.gradients p:nth-child(1) {
+    font-size: 1.4rem;
+    position: absolute;
+    bottom: 30px
+}
+
+.gradients p:nth-child(2) {
+    font-size: 1.6rem;
+    position: absolute;
+    bottom: 10px
+}
+
+.main {
+    font-size: 1.4rem;
+    padding: 79% 4% 0;
+    word-wrap: break-word;
+    -webkit-user-select: auto
+}
+
+.main div, a, b, canvas, dd, dl, dt, em, form, h1, h2, h3, h4, h5, h6, hr, img, input, label, li, ol, p, q, span, ul {
+    -webkit-user-select: text
+}
+
+.main p img {
+    width: 100%
+}
+
+.content {
+    width: 100%;
+    display: -webkit-box;
+    padding-top: 10px
+}
+
+.content a {
+    color: #ff8903;
+    text-decoration: none
+}
+
+.content a:active {
+    text-decoration: underline
+}
+
+.content p:first-child {
+    width: 25%;
+    color: #999
+}
+
+.content p:last-child {
+    width: 76%;
+    color: #666;
+    word-break: break-all
+}
+
+.btn-org {
+    display: inline-block;
+    text-align: center;
+    cursor: default;
+    width: 33%;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 2.0rem;
+    font-family: "黑体", Arial, sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 20px 3% 20px auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, .2);
+    background-color: #ffc155;
+    float: right
+}
+
+.btn-gray {
+    text-align: center;
+    cursor: default;
+    display: inline-block;
+    width: 33%;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 2.0rem;
+    font-family: "黑体", Arial, sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 20px 3% 20px auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, .2);
+    background-color: #e0e0e0;
+    float: right
+}
+
+.btn-org:active {
+    background-color: #df7800
+}
+.btn {
+    display: inline-block;
+    text-align: center;
+    cursor: default;
+    width: 50%;
+    height: 39px;
+    line-height: 40px;
+    color: #6796e4;
+    font-size: 1.8rem;
+    text-decoration: none;
+    margin-top: 30px;
+    float: left;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, .2);
+    background-color: #fff;
+    border-top: 1px solid #e6e6e6;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.btn-ok{
+    border-right: 1px solid #e6e6e6;
+    -webkit-border-radius: 0px 0px 0px 10px;
+    -moz-border-radius: 0px 0px 0px 10px;
+    border-radius: 0px 0px 0px 10px;
+    outline: none;
+}
+
+.btn-cancel{
+    -webkit-border-radius: 0px 0px 10px 0px;
+    -moz-border-radius: 0px 0px 10px 0px;
+    border-radius: 0px 0px 10px 0px;
+    outline: none;
+}
+
+.draw {
+    display: none;
+    width: 280px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 10px
+}
+
+.draw_bg {
+    width: 189px;
+    height: 103px;
+    background: url(http://static.diditaxi.com.cn/activity/img-mall/draw_bg.png) center bottom no-repeat;
+    background-size: 189px 103px;
+    margin: 0 auto;
+    padding-top: 25px
+}
+
+.draw_box {
+    width: 51px;
+    height: 48px;
+    background: url(http://static.diditaxi.com.cn/activity/img-mall/draw_box.png) center center no-repeat;
+    background-size: 61px 58px;
+    margin: 0 auto;
+    padding-top: 50px;
+    -webkit-animation: draw 3s .2s ease both
+}
+
+.draw_text {
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #666;
+    padding-bottom: 16px
+}
+
+.fix_main {
+    font-size: 1.4rem;
+    padding: 0 4%
+}
+
+@-webkit-keyframes draw {
+    0% {
+        -webkit-transform: scale(.84)
+    }
+    4%, 8% {
+        -webkit-transform: scale(.75) rotate(-10deg)
+    }
+    12%, 20%, 28%, 36%, 44%, 52%, 60%, 68%, 76%, 84%, 92% {
+        -webkit-transform: scale(1) rotate(10deg)
+    }
+    16%, 24%, 32%, 40%, 48%, 56%, 64%, 72%, 80%, 88%, 96% {
+        -webkit-transform: scale(1) rotate(-10deg)
+    }
+    100% {
+        -webkit-transform: scale(.84) rotate(0deg)
+    }
+}
+
+.border {
+    border-bottom: 1px solid #fff;
+    word-break: break-all
+}
+
+.declare {
+    text-align: center;
+    width: 92%;
+    border: 1px dashed #999;
+    border-radius: 5px;
+    margin: 18px 3% 20px;
+    position: relative
+}
+
+.declare p {
+    font-size: 1.2rem;
+    color: #333;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    margin-left: -35px;
+    padding: 0 12px;
+    background-color: #fff
+}
+
+.declare_cont {
+    text-align: left;
+    font-size: 1rem;
+    color: #666;
+    line-height: 18px
+}
+
+.declare_cont div:nth-child(1) {
+    padding: 18px 7% 10px
+}
+
+.declare_cont div:nth-child(2) {
+    border-top: 1px dashed #999;
+    padding: 10px 7%
+}
+
+.pos_fixed {
+    position: fixed;
+    top: 0;
+}
+p{
+    color: #666;
+}
+p.detail-title{
+    font-size: 1.6rem;
+    color: #333333;
+    font-weight: 500;
+}
+
+.mask{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #000000;
+    opacity: 0.3;
+    z-index: 999;
+    display: none;
+}
+.dialog{
+    width: 300px;
+    height: 120px;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background-color: #fff;
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    margin-left: -150px;
+    z-index: 1000;
+    display: none;
+}
+.dialog p{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.6rem;
+    color: #333333;
+}
+
+.btn:active{
+    background: #d9d9d9;
+    border-color: #d9d9d9;
+}
+
+/*积分兑换 S*/
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th{
+    background-color: #e0e0e0;
+}
+td,th{
+    border: 1px solid #cccccc;
+    text-align: center;
+    height: 2em;
+}
+
+
+.tab-details dl{
+    border-bottom: 1px solid #f0f0f0;
+    overflow: hidden;
+}
+dl{
+    padding: 20px;
+}
+dt{
+    width: 32%;
+}
+.fl{
+    float: left;
+}
+.ml-20{
+    margin-left: 20px;
+}
+
+.change-title{
+    font-size: 1.8rem;
+    font-family: "黑体";
+    color: #333333;
+    font-weight: 500;
+    margin: 5px 0;
+}
+.change-status{
+    font-style: normal;
+    color: #ffc155;
+    font-size: 1.8rem;
+    margin-left: 1em;
+    font-family: "黑体";
+}
+.exchange-date{
+    font-size: 1.5rem;
+    color: #999;
+    margin-top: 1.5em;
+    background-color: #fff;
+}
+
+
+.score-details{
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.get-score{
+    font-size: 1.8rem;
+    color: #ffc155;
+    float: right;
+    margin-top: 1rem;
+}
+.score-details li{
+    font-size: 1.6rem;
+    color: #333;
+    line-height: 2.4rem;
+}
+.score-details li span{
+    font-size: 1.6rem;
+    color: #666;
+}
+.score-details li.score-date{
+    font-size: 1.4rem;
+    color: #999;
+    line-height: 2.8rem;
+    border-top: 1px dashed #ccc;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+}

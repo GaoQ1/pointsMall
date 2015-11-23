@@ -1,0 +1,16 @@
+<ul class="tab-details">
+    <li style="background-color: #fff;">
+        {{#each result}}
+            <dl>
+                <dt class="fl">
+                    <img src="{{picUrl}}" alt=""/>
+                </dt>
+                <dd class="fl ml-20 pos-rel">
+                    <p class="change-title">{{title}}</p>
+                    <p style="font-size: 1.4rem;text-indent: 5px;">299<span class="per_count"></span><i class="change-status">{{status}}</i></p>
+                    <p class="exchange-date">{{exchangeDate}}</p>
+                </dd>
+            </dl>
+        {{/each}}
+    </li>
+</ul>

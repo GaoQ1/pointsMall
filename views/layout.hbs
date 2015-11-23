@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <title>{{result.pageTitle}}</title>
+        <!--<link rel="stylesheet" href="/css/s-common.css"/>
+        <link rel="stylesheet" href="/css/s-detail.css"/>
+        <link rel="stylesheet" href="/css/s-index.css"/>-->
+        <link rel="stylesheet" href="/vendor/Swiper/dist/css/swiper.min.css"/>
+        <link rel="stylesheet" href="/css/style.min.css"/>
+        <script src="/js/script.js"></script>
+        <script>
+            var loadAfterLoginSuccess = function(userInfo){
+                if(userInfo && userInfo.appId && userInfo.accessToken){
+                    window.location = "/app/"+ userInfo.appId+"/"+userInfo.accessToken;
+                }else{
+                    window.location = "/login";
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+            {{{body}}}
+    </body>
+</html>

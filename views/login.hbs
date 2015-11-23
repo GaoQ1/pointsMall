@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./css/style.min.css"/>
+    <title>登录</title>
+    <style>
+        p{
+            width: 100%;
+            height: 3rem;
+            margin: 30px auto 0px;
+        }
+        .input-txt{
+            width: 66%;
+            height: 100%;
+            text-indent: 1rem;
+            line-height: 3rem;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+        .btn-getCode{
+            text-align: center;
+            color: #fff;
+            display: inline-block;
+            width: 26%;
+            height: 100%;
+            background-color: #ff8a01;
+            border-radius: 5px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            outline: none;
+            cursor: pointer;
+        }
+        .w100{
+            width: 100% !important;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+<form id="verifyPhone" style="margin-top: 150px;">
+    <p>
+        <input type="text" class="input-txt w100 phone" placeholder="手机号"/>
+    </p>
+    <p>
+        <input type="text" class="input-txt fl phoneCodeText" placeholder="验证码"/>
+        <input type="button" id="getCode" class="btn-getCode fr" value="获取验证码" />
+    </p>
+    <p>
+        <input type="button" class="btn-getCode w100" id="btn-login" value="开始使用" />
+    </p>
+</form>
+
+</body>
+<script src="/js/libs/libs.min.js"></script>
+
+<!--<script src="/js/util/httpService.js"></script>
+<script src="/js/util/utility.js"></script>-->
+
+<script src="/js/util/utils.min.js"></script>
+<script type="text/javascript">
+    var getPhoneCodeBtn = $("#getCode");
+    var phone = $(".phone");
+    var loginBtn = $("#btn-login");
+    var phoneCodeText = $(".phoneCodeText");
+    getPhoneCodeBtn.on("click", function(){
+        if(!phone.val().match(/^1[3|4|5|6|7|8|9]\d{9}$/)){
+            alert("手机号格式错误");
+        }
+        var _http = http();
+        _http.post("/getsmscode", {type: 1, phone: phone.val()}, function(data){
+            var time = 60;
+            getPhoneCodeBtn.attr("value",time + " 秒").prop('disabled', true);
+            var t = setInterval(function() {
+                if (time > 1) {
+                    time -= 1;
+                    getPhoneCodeBtn.attr("value",time + " 秒");
+                } else {
+                    clearInterval(t);
+                    getPhoneCodeBtn.attr("value","获取验证码").prop('disabled', false);
+                }
+            }, 1000);
+        });
+    });
+    var bindtoken = function(openId){
+        $.ajax({
+            url: "/bindAccessToken?json=1",
+            dataType: "json",
+            async:false,
+            data: {"openId":openId},
+            type: "GET",
+            success: function(data) {
+                console.log(data.result.msg);
+            },
+            error: function(e) {
+                console.log("绑定失败！");
+            }
+        });
+    }
+    loginBtn.on("click", function(){
+        $.ajax({
+            url: "/login",
+            dataType: "json",
+            data: {verifyCode:phoneCodeText.val(),userName:phone.val(),loginType:"1"},
+            type: "POST",
+            success: function(data) {
+                if(data){
+                    bindtoken({{openId}});
+                    window.location = "/mall";
+                }
+            },
+            error: function(e) {
+                config.errHandler("数据请求错误");
+            }
+        });
+
+    })
+</script>
+</html>

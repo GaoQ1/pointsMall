@@ -1,0 +1,8 @@
+node_modules/
+.idea/
+build.sh
+run.sh
+config.alpha.js
+config.beta.js
+config.dev.js
+config.release.js

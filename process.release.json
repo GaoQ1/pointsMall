@@ -1,0 +1,12 @@
+{
+  "apps" : [{
+    "name"        : "pointsMall",
+    "script"      : "bin/pointsMall",
+    "watch"       : true,
+    "merge_logs"  : true,
+    "env": {
+      "NODE_ENV": "production",
+      "configPath": "config.release.js"
+    }
+  }]
+}

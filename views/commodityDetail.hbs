@@ -1,0 +1,143 @@
+<div class="img" id="head">
+    <!--轮播s-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            {{#each result.picUrls}}
+                <div class="swiper-slide">
+                    <img src="{{picUrl}}" alt="{{title}}"/>
+                    <div class="bottom-bar"></div>
+                    <span>{{title}}</span>
+                </div>
+            {{/each}}
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+    </div>
+    <!--轮播e-->
+    <div class="describe_box">
+        <!--<div class="describe hide" id="describe2">
+            <span id="goods_count2">553</span>
+            <a class="btn-gray" id="btn2">积分不足</a>
+        </div>-->
+        {{#if result.price}}
+        <div class="describe" id="describe">
+            <span id="goods_count" style="top: 10px;">{{result.integral}}</span>
+            <span>市场价： <i>{{result.price}}</i></span>
+            <a class="btn-org" id="btn">兑换</a>
+        </div>
+        {{else}}
+        <div class="describe" id="describe">
+            <span id="goods_count" style="top: 21px;">{{result.integral}}</span>
+            <a class="btn-org" id="btn">兑换</a>
+        </div>
+        {{/if}}
+    </div>
+</div>
+<div class="main" id="main" style="background-color: #fff;">
+    {{result.description}}
+</div>
+<!--<div class="border">
+    <div class="declare">
+        <p>重要说明</p>
+
+        <div class="declare_cont" id="declare">
+            <div>商品兑换流程请仔细参照商品详情页的“兑换流程”、“注意事项”与“使用时间”，除商品本身不能正常兑换外，商品一经兑换，一律不退还积分。（如商品过期、兑换流程操作失误、仅限新用户兑换）</div>
+        </div>
+    </div>
+</div>-->
+<div class="mask"></div>
+<div class="dialog" id="dialog">
+    <p>确定兑换该商品吗？</p>
+    <a class="btn btn-ok" id="ok">确定</a>
+    <a class="btn btn-cancel" id="cancel">取消</a>
+</div>
+<div class="dialog" id="msg">
+    <p style="font-size: 1.6rem;"></p>
+</div>
+
+<script src="/js/libs/libs.min.js"></script>
+<script src="/js/util/utils.min.js"></script>
+<script src="/vendor/Swiper/dist/js/swiper.jquery.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+</script>
+<script>
+    $('#btn').click(function(){
+        $('.mask').height($(document).height()).show();
+        $('#dialog').show();
+    });
+    $('#cancel').click(function(){
+        $('#dialog').hide();
+        $('.mask').hide();
+    });
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    };
+
+    $('#ok').on('click', function(){
+        var score = "{{result.integral}}";
+        var productId = getQueryString("productId");
+        var url = "/proexchange?json=1";
+        var _http = http({errHandler:function(){
+            $('#dialog').hide();
+            $("#msg p").css('margin-top','50px').text("兑换失败！");
+            $("#msg").show();
+            setTimeout(function(){
+                $('#msg').hide();
+                $('.mask').hide();
+            },1000);
+        }});
+        _http.get(url,{score: score, productId: productId},function(data){
+            $('#dialog').hide();
+            $("#msg p").css('margin-top','50px').text(data.result.msg);
+            $("#msg").show();
+            setTimeout(function(){
+                $('#msg').hide();
+                $('.mask').hide();
+            },1000);
+        });
+        /*$.ajax({
+            type:"GET",
+            url: url,
+            data:{score: score, productId: productId},
+            success:function(data){
+                if (data.status.code == "202") {
+                }else if (data.status.code == "1") {
+                    $('#dialog').hide();
+                    if(data.result == ''){
+                        $("#msg p").css('margin-top','50px').text(data.result.msg);
+                        $("#msg").show();
+                    }else{
+                        $("#msg p").css('margin-top','50px').text("兑换失败！");
+                        $("#msg").show();
+                    }
+                    setTimeout(function(){
+                        $('#msg').hide();
+                        $('.mask').hide();
+                    },1000);
+                } else {
+                    config.errHandler(data.status.desp);
+                }
+
+            },
+            error:function(){
+            }
+        });*/
+    });
+</script>
+<script>
+    var result = $('#main').html().replace(/\&lt;/g,'<').replace(/\&gt;/g,'>');
+    $('#main').html(result);
+</script>

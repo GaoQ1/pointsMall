@@ -1,0 +1,24 @@
+{
+  "name": "pointsMall",
+  "version": "4.1.1",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+    "gaoq"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Swiper": "swiper#~3.1.5"
+  }
+}

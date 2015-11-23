@@ -1,0 +1,22 @@
+<div id="goods">
+    <!--module S-->
+    <div id="modules">
+            <div class="list">
+                {{#each result.productList}}
+                <div class="list_per_index" onclick='location.href = "/mall/commodityDetail?productId={{id}}"'>
+                    <div class="mod_txt">
+                        <p class="mod_state">
+                            <span>{{title}}</span>
+                        </p>
+                        <p>{{subTitle}}</p>
+                        <p>{{score}}<span class="per_count"></span></p>
+                    </div>
+                    <div class="img_box3">
+                        <img class="mod_img" src="{{picUrl}}" alt="">
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+    </div>
+    <!--module E-->
+</div>

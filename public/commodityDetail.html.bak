@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="./css/style.min.css"/>
+</head>
+<body>
+<div class="img" id="head">
+    <!--轮播s-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./images/rewardshop/20151008125928detail.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/rewardshop/20151008125928detail.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/rewardshop/20151008125928detail.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/rewardshop/20151008125928detail.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/rewardshop/20151008125928detail.jpg" alt="">
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <!--轮播e-->
+    <div class="describe_box">
+        <!--<div class="describe hide" id="describe2">
+            <span id="goods_count2">553</span>
+            <a class="btn-gray" id="btn2">积分不足</a>
+        </div>-->
+        <div class="describe" id="describe">
+            <span id="goods_count">553</span>
+            <a class="btn-org" id="btn">兑换</a>
+        </div>
+    </div>
+</div>
+<div class="main" id="main"><p>商品简介：</p>
+
+    <p>【多燕瘦苹果酸片试用装】 &nbsp;价值99元</p>
+
+    <p>亚洲瘦身女王郑多燕10年亲研，核心成分通过美国FDA专业认证，排油脂、清宿便、减老肉3大步骤，达到减肥美容双效合一。</p>
+
+    <p><br></p>
+
+    <p><span style="color: rgb(227, 108, 9);">小滴说：觉得商品棒棒哒，点击商品详情页右上角“圆圈”，分享给小伙伴们吧!</span></p>
+
+    <p><br></p>
+
+    <p>使用范围：</p>
+
+    <p>全国<span style="color: rgb(227, 108, 9);">（20元运费用户自理）</span></p>
+
+    <p><br></p>
+
+    <p>使用有效期：</p>
+
+    <p>兑换之日起至2015年12月31日有效</p>
+
+    <p><br></p>
+
+    <p>兑换流程：</p>
+
+    <p>1、兑换后获得【兑换码】</p>
+
+    <p>2、微信添加多燕瘦客服私人号：E888U8</p>
+
+    <p>3、添加成功以后，即可将自己的【姓名】+【收货地址】+【联系方式】，连同【兑换码】一并提交给客服</p>
+
+    <p>4、等待客服确认兑换基本信息无误后，通过微信直接支付邮费</p>
+
+    <p>5、用户付款成功后，由专业的物流人员在1—3个工作日内安排发货</p>
+
+    <p><br></p>
+
+    <p>注意事项：</p>
+
+    <p>1、每位滴滴用户仅限兑换一次</p>
+
+    <p>2、每个ID仅限发货一次</p>
+
+    <p>3、客服电话：400-188-5535</p>
+
+    <p>4、商品详情：</p>
+
+    <p><img src="./images/rewardshop/1444280405853224.jpg" title="" alt=""></p></div>
+<div class="border">
+    <div class="declare">
+        <p>重要说明</p>
+
+        <div class="declare_cont" id="declare">
+            <div>商品兑换流程请仔细参照商品详情页的“兑换流程”、“注意事项”与“使用时间”，除商品本身不能正常兑换外，商品一经兑换，一律不退还积分。（如商品过期、兑换流程操作失误、仅限新用户兑换）</div>
+        </div>
+    </div>
+</div>
+
+<!--dialog sure S-->
+<div class="mask"></div>
+<div class="dialog" id="dialog">
+    <p>确认兑换该商品吗？</p>
+    <a class="btn-sure" id="ok">确认</a>
+    <a class="btn-sure" id="cancel">取消</a>
+</div>
+
+</body>
+<script src="./js/libs/libs.min.js"></script>
+<script src="./js/util/utils.min.js"></script>
+<!--<script src="../src/js/app.js"></script>-->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+</script>
+<script>
+    $('#btn').click(function(){
+        $('.mask').height($(document).height()).show();
+        $('#dialog').show();
+    });
+    $('#cancel').click(function(){
+        $('#dialog').hide();
+        $('.mask').hide();
+    })
+</script>
+</html>
